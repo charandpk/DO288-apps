@@ -24,6 +24,8 @@ func rootHandler(response http.ResponseWriter, request *http.Request) {
         fmt.Fprintf(response, "Hello %s!. Welcome!\n", request.URL.Path[1:])
       case "es":
         fmt.Fprintf(response, "Hola %s!. Bienvenido!\n", request.URL.Path[1:])
+      case "jp":
+        fmt.Fprintf(response, "Japon %s!, Japan welcome\n", request.URL.Path[1:])
       default:
         fmt.Fprintf(response, "Error! unknown lang option -> %s\n", *lang)
   }
